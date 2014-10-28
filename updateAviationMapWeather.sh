@@ -12,3 +12,5 @@ mv ./metars.cache.csv ../aviationMap/weather/
 mv ./tafs.cache.csv ../aviationMap/weather/
 mv ./mergedTfrs.csv ../aviationMap/tfr/
 
+#Clear out old data
+rm airsigmets.cache.xml

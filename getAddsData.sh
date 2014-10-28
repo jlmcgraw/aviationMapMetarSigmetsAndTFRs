@@ -2,17 +2,19 @@
 set -eu                # Always put this in Bourne shell scripts
 IFS="`printf '\n\t'`"  # Always put this in Bourne shell scripts
 
-## Clean out old data
-# rm ./aircraftreports.cache.csv.gz
-# rm ./airsigmets.cache.xml.gz
-# rm ./metars.cache.csv.gz
-# rm ./tafs.cache.csv.gz
+set +e
+# Clean out old data
+rm ./aircraftreports.cache.csv.gz
+rm ./airsigmets.cache.xml.gz
+rm ./metars.cache.csv.gz
+rm ./tafs.cache.csv.gz
 
-# rm ./aircraftreports.cache.csv
-# rm ./airsigmets.cache.csv
-# rm ./metars.cache.csv
-# rm ./tafs.cache.csv
-# rm ./mergedTfrs.csv
+rm ./aircraftreports.cache.csv
+rm ./airsigmets.cache.csv
+rm ./metars.cache.csv
+rm ./tafs.cache.csv
+rm ./mergedTfrs.csv
+set -e
 
 #Experimental server
 # wget -N http://weather.aero/dataserver_current/cache/aircraftreports.cache.csv.gz
